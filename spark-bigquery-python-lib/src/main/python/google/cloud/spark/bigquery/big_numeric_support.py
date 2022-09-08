@@ -20,21 +20,16 @@ class BigNumericUDT(UserDefinedType):
 
     def serialize(self, obj):
         if isinstance(obj, BigNumeric):
-            return str(obj.number)
+            return str(obj)
         else:
             raise TypeError("cannot serialize %r of type %r" % (obj, type(obj)))
 
     def deserialize(self, datum):
-        return BigNumeric(Decimal(str(datum)))
+        return BigNumeric(str(datum))
 
     def simpleString(self):
         return "BigNumeric"
 
 
-class BigNumeric():
-
-    def __init__(self, number):
-        if isinstance(number, Decimal):
-            self.number = number
-        else:
-            raise TypeError("BigNumeric Constuctor: expecting Decimal but got %r " % type(number))
+class BigNumeric(Decimal):
+    pass
