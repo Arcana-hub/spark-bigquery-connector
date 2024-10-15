@@ -51,7 +51,7 @@
         <gpg.skip>true</gpg.skip>
         <revision>0.0.1-SNAPSHOT</revision>
 
-        <avro.version>1.11.0</avro.version>
+        <avro.version>1.11.4</avro.version>
         <arrow.version>9.0.0</arrow.version>
         <gax.version>2.18.4</gax.version>
         <google-cloud-bigquery.version>2.14.4</google-cloud-bigquery.version>
